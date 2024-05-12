@@ -30,13 +30,13 @@ namespace fans
         public static State b = new State()
         {
             Name = "b",
-            IsAcceptState = true,
+            IsAcceptState = false,
             Transitions = new Dictionary<char, State>()
         };
         public static State c = new State()
         {
             Name = "c",
-            IsAcceptState = false,
+            IsAcceptState = true,
             Transitions = new Dictionary<char, State>()
         };
 
@@ -53,7 +53,6 @@ namespace fans
             IsAcceptState = false,
             Transitions = new Dictionary<char, State>()
         };
-
         State InitialState = a;
 
         public FA1()
