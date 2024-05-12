@@ -11,6 +11,11 @@ namespace fans
     public string Name;
     public Dictionary<char, State> Transitions;
     public bool IsAcceptState;
+
+    public void AddTransition(char symbol, State state)
+        {
+            Transitions[symbol] = state;
+        }
   }
 
 
