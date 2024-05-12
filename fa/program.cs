@@ -157,7 +157,7 @@ namespace fans
                 Transitions = new Dictionary<char, State>()
             };
             State InitialState = a;
-            public FA2()
+            public FA3()
             {
                 InitialState.AddTransition('0', InitialState);
                 InitialState.AddTransition('1', b);
