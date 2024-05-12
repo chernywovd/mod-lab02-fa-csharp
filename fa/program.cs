@@ -116,7 +116,7 @@ namespace fans
                 InitialState.AddTransition('0', d);
                 InitialState.AddTransition('1', b);
                 b.AddTransition('0', c);
-                b.AddTransition('1', initialState);
+                b.AddTransition('1', InitialState);
                 c.AddTransition('0', b);
                 c.AddTransition('1', d);
                 d.AddTransition('0', a);
