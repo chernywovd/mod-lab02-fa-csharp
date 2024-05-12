@@ -63,7 +63,7 @@ namespace fans
             b.AddTransition('0',d);
             b.AddTransition('1',c);
             c.AddTransition('0',d);
-            c.AddTransition('1',a);
+            c.AddTransition('1',c);
             d.AddTransition('0', d);
             d.AddTransition('1', d);
             e.AddTransition('0', c);
