@@ -100,26 +100,26 @@ namespace fans
             public static State c = new State()
             {
                 Name = "c",
-                IsAcceptState = false,
+                IsAcceptState = true,
                 Transitions = new Dictionary<char, State>()
             };
             public static State d = new State()
             {
                 Name = "d",
-                IsAcceptState = true,
+                IsAcceptState = false,
                 Transitions = new Dictionary<char, State>()
             };
 
             State InitialState = a;
             public FA2()
             {
-                InitialState.AddTransition('0', c);
+                InitialState.AddTransition('0', d);
                 InitialState.AddTransition('1', b);
-                b.AddTransition('0', d);
+                b.AddTransition('0', c);
                 b.AddTransition('1', initialState);
-                c.AddTransition('0', initialState);
+                c.AddTransition('0', b);
                 c.AddTransition('1', d);
-                d.AddTransition('0', b);
+                d.AddTransition('0', a);
                 d.AddTransition('1', c);
             }
 
